@@ -20,7 +20,10 @@ public class LoginFilter implements Filter {
 //        做用户登录过滤 登录 需要放行 注册需要放行   校验需要i放行  页面跳转放行
 //        获取请求路径  判断uri是否包含关键字
         String uri = req.getRequestURI();
-        if (uri.contains("/login/")) {
+        if (uri.contains("/login")
+
+        ||uri.contains("/statics/")
+        ) {
             chain.doFilter(req, res);
             return;
         }

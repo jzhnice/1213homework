@@ -8,6 +8,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
  * @author jzh
  * @version 1.0
  * @date 2021/12/14 16:32
+ * 中转站
  */
 @Controller
 @RequestMapping("/page")
@@ -16,7 +17,7 @@ public class PageDispatcherController {
     public String main(){
         return "backend/main";
     }
-    @GetMapping("/login.to")
+    @GetMapping("login.to")
     public String login(){
         return "backendlogin";
     }
