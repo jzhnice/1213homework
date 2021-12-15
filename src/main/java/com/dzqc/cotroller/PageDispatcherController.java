@@ -21,8 +21,16 @@ public class PageDispatcherController {
     public String main(){
         return "backend/main";
     }
+    @GetMapping("maint.to")
+    public String maint(){
+        return "developer/main";
+    }
     @GetMapping("login.to")
     public String login(){
         return "backendlogin";
+    }
+    @GetMapping("applist.to")
+    public String applist(){
+        return "backend/applist";
     }
 }

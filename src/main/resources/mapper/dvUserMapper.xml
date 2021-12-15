@@ -22,40 +22,42 @@
     <include refid="Base_Column_List" />
     from dev_user
     where
-
+    id = #{id,jdbcType=BIGINT}
   </select>
   <select id="selectUser" resultMap="BaseResultMap" parameterType="java.lang.Long" >
     select
     <include refid="Base_Column_List" />
     from dev_user
     where
-
+          <if test="id!=null">
+            id=#{id,jdbcType=BIGINT}
+          </if>
     <if test="devcode != null" >
-and      devCode = #{devcode,jdbcType=VARCHAR},
+    and devCode = #{devcode,jdbcType=VARCHAR}
     </if>
     <if test="devname != null" >
-    and  devName = #{devname,jdbcType=VARCHAR},
+    and  devName = #{devname,jdbcType=VARCHAR}
     </if>
     <if test="devpassword != null" >
-     and devPassword = #{devpassword,jdbcType=VARCHAR},
+     and devPassword = #{devpassword,jdbcType=VARCHAR}
     </if>
     <if test="devemail != null" >
-     and devEmail = #{devemail,jdbcType=VARCHAR},
+     and devEmail = #{devemail,jdbcType=VARCHAR}
     </if>
     <if test="devinfo != null" >
-      and devInfo = #{devinfo,jdbcType=VARCHAR},
+      and devInfo = #{devinfo,jdbcType=VARCHAR}
     </if>
     <if test="createdby != null" >
-      and createdBy = #{createdby,jdbcType=BIGINT},
+      and createdBy = #{createdby,jdbcType=BIGINT}
     </if>
     <if test="creationdate != null" >
-      and creationDate = #{creationdate,jdbcType=TIMESTAMP},
+      and creationDate = #{creationdate,jdbcType=TIMESTAMP}
     </if>
     <if test="modifyby != null" >
-      and modifyBy = #{modifyby,jdbcType=BIGINT},
+      and modifyBy = #{modifyby,jdbcType=BIGINT}
     </if>
     <if test="modifydate != null" >
-      and modifyDate = #{modifydate,jdbcType=TIMESTAMP},
+      and modifyDate = #{modifydate,jdbcType=TIMESTAMP}
     </if>
   </select>
   <delete id="deleteByPrimaryKey" parameterType="java.lang.Long" >

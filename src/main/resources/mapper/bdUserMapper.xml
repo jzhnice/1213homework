@@ -29,7 +29,7 @@
     where
 
     <if test="usercode != null" >
-      userCode= #{usercode,jdbcType=VARCHAR}
+      userCode = #{usercode,jdbcType=BIGINT}
     </if>
     <if test="username != null" >
      and userName= #{username,jdbcType=VARCHAR}

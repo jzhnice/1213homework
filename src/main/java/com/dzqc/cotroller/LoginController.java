@@ -43,22 +43,22 @@ public class LoginController {
         }
         return "redirect:/page/main.to";
     }
-    @PostMapping("dologin")
+    @PostMapping("/dologin")
     public String logintO(String usercode, String userpassword, HttpSession session, Model model){
         dvUser user = new dvUser();
         user.setDevcode(usercode);
         List<dvUser> query = dvUserService.query(user);
         if (query.isEmpty()) {
             model.addAttribute("error", "用户名错误");
-            return "backendlogin";
+            return "devlogin";
         } else {
             if (userpassword.equals(query.get(0).getDevpassword())) {
                 session.setAttribute("devUserSession", query.get(0));
             } else {
                 model.addAttribute("error", "密码错误");
-                return "backendlogin";
+                return "devlogin";
             }
         }
-        return "redirect:/page/main.to";
+        return "redirect:/page/maint.to";
     }
     }
