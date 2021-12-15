@@ -28,7 +28,7 @@ public class LoginFilter implements Filter {
             return;
         }
         HttpSession session = req.getSession();
-        Object loginUser = session.getAttribute("loginUser");
+        Object loginUser = session.getAttribute("devUserSession");
         if (loginUser != null) {
             chain.doFilter(req, res);
         } else {

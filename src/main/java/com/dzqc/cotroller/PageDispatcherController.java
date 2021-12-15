@@ -1,5 +1,7 @@
 package com.dzqc.cotroller;
 
+import com.dzqc.service.bdUserService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -13,6 +15,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @Controller
 @RequestMapping("/page")
 public class PageDispatcherController {
+    @Autowired
+    private bdUserService userService;
     @GetMapping("main.to")
     public String main(){
         return "backend/main";
@@ -21,6 +25,4 @@ public class PageDispatcherController {
     public String login(){
         return "backendlogin";
     }
-
-
 }

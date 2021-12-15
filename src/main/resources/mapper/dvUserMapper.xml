@@ -21,7 +21,42 @@
     select 
     <include refid="Base_Column_List" />
     from dev_user
-    where id = #{id,jdbcType=BIGINT}
+    where
+
+  </select>
+  <select id="selectUser" resultMap="BaseResultMap" parameterType="java.lang.Long" >
+    select
+    <include refid="Base_Column_List" />
+    from dev_user
+    where
+
+    <if test="devcode != null" >
+and      devCode = #{devcode,jdbcType=VARCHAR},
+    </if>
+    <if test="devname != null" >
+    and  devName = #{devname,jdbcType=VARCHAR},
+    </if>
+    <if test="devpassword != null" >
+     and devPassword = #{devpassword,jdbcType=VARCHAR},
+    </if>
+    <if test="devemail != null" >
+     and devEmail = #{devemail,jdbcType=VARCHAR},
+    </if>
+    <if test="devinfo != null" >
+      and devInfo = #{devinfo,jdbcType=VARCHAR},
+    </if>
+    <if test="createdby != null" >
+      and createdBy = #{createdby,jdbcType=BIGINT},
+    </if>
+    <if test="creationdate != null" >
+      and creationDate = #{creationdate,jdbcType=TIMESTAMP},
+    </if>
+    <if test="modifyby != null" >
+      and modifyBy = #{modifyby,jdbcType=BIGINT},
+    </if>
+    <if test="modifydate != null" >
+      and modifyDate = #{modifydate,jdbcType=TIMESTAMP},
+    </if>
   </select>
   <delete id="deleteByPrimaryKey" parameterType="java.lang.Long" >
     delete from dev_user

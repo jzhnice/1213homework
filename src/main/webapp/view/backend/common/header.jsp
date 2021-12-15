@@ -1,5 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
+    pageEncoding="UTF-8" isELIgnored="false" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt"%>
 <!DOCTYPE html>
@@ -36,7 +36,7 @@
         <div class="col-md-3 left_col menu_fixed">
           <div class="left_col scroll-view">
             <div class="navbar nav_title" style="border: 0;">
-              <a href="${pageContext.request.contextPath }/manager/backend/main" class="site_title"><i class="fa fa-paw"></i> <span>APP BMS</span></a>
+              <a href="${pageContext.request.contextPath}/view/backend/main.jsp" class="site_title"><i class="fa fa-paw"></i> <span>APP BMS</span></a>
             </div>
 
             <div class="clearfix"></div>
@@ -48,7 +48,7 @@
               </div>
               <div class="profile_info">
                 <span>Welcome,</span>
-                <h2>${userSession.userCode }</h2>
+                <h2>${devUserSession.usercode }</h2>
               </div>
             </div>
             <!-- /menu profile quick info -->
@@ -58,24 +58,24 @@
             <!-- sidebar menu -->
             <div id="sidebar-menu" class="main_menu_side hidden-print main_menu">
               <div class="menu_section">
-                <h3>${userSession.userName }</h3>
+                <h3>${devUserSession.username }</h3>
                 <ul class="nav side-menu">
                   <li><a><i class="fa fa-home"></i> APP管理 <span class="fa fa-chevron-down"></span></a>
                     <ul class="nav child_menu">
-                      <li><a href="${pageContext.request.contextPath }/manager/backend/app/list">APP审核</a></li>
-                      <li><a href="javascript:;">广告推广</a></li>
+                      <li><a href="${pageContext.request.contextPath}/view/backend/applist.jsp">APP审核</a></li>
+                      <li><a href="javascript:">广告推广</a></li>
                     </ul>
                   </li>
                   <li><a><i class="fa fa-edit"></i> 用户管理 <span class="fa fa-chevron-down"></span></a>
                     <ul class="nav child_menu">
-                      <li><a href="javascript:;">后台用户管理</a></li>
-                      <li><a href="javascript:;">开发者资质审核</a></li>
+                      <li><a href="javascript:">后台用户管理</a></li>
+                      <li><a href="javascript:">开发者资质审核</a></li>
                     </ul>
                   </li>
                   <li><a><i class="fa fa-bug"></i> 基础数据维护 <span class="fa fa-chevron-down"></span></a>
                     <ul class="nav child_menu">
-                      <li><a href="javascript:;">数据字典</a></li>
-                      <li><a href="javascript:;">APP分类管理</a></li>
+                      <li><a href="javascript:">数据字典</a></li>
+                      <li><a href="javascript:">APP分类管理</a></li>
                     </ul>
                   </li>
                 </ul>
@@ -96,7 +96,7 @@
               <a data-toggle="tooltip" data-placement="top" title="Lock">
                 <span class="glyphicon glyphicon-eye-close" aria-hidden="true"></span>
               </a>
-              <a data-toggle="tooltip" data-placement="top" title="Logout" href="${pageContext.request.contextPath }/manager/logout">
+              <a data-toggle="tooltip" data-placement="top" title="Logout" href="${pageContext.request.contextPath }/login/back">
                 <span class="glyphicon glyphicon-off" aria-hidden="true"></span>
               </a>
             </div>
@@ -114,12 +114,12 @@
 
               <ul class="nav navbar-nav navbar-right">
                 <li class="">
-                  <a href="javascript:;" class="user-profile dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
-                    <img src="${pageContext.request.contextPath }/statics/images/img.jpg" alt="">${userSession.userCode }
+                  <a href="javascript:" class="user-profile dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+                    <img src="${pageContext.request.contextPath }/statics/images/img.jpg" alt="">${devUserSession.usercode }
                     <span class=" fa fa-angle-down"></span>
                   </a>
                   <ul class="dropdown-menu dropdown-usermenu pull-right">
-                    <li><a href="${pageContext.request.contextPath }/manager/logout"><i class="fa fa-sign-out pull-right"></i> Log Out</a></li>
+                    <li><a href="${pageContext.request.contextPath }/index.jsp"><i class="fa fa-sign-out pull-right"></i> Log Out</a></li>
                   </ul>
                 </li>
 
@@ -164,7 +164,7 @@
                     </li>
                     <li>
                       <a>
-                        <span class="image"><img src="${pageContext.request.contextPath }/statics/images/img.jpg" alt="Profile Image" /></span>
+                        <span class="image"><img src="${pageContext.request.contextPath}/statics/images/img.jpg" alt="Profile Image" /></span>
                         <span>
                           <span>John Smith</span>
                           <span class="time">3 mins ago</span>
@@ -190,4 +190,4 @@
         </div>
        <!-- /top navigation -->
 		<div class="right_col" role="main">
-			<div class="">
+          <div class=""></div></div></div></div></body>
