@@ -21,9 +21,9 @@ public class dvUserServiceimpl implements dvUserService  {
     private dvUserMapper mapper;
     @Override
     public List<dvUser> query(dvUser dvUser) {
-        System.out.println("进入dvUser中的query的方法");
-        List<dvUser> dvUsers = mapper.selectUser(dvUser);
-        return dvUsers;
+        System.out.println("进入dvUser中的 dvUser query的方法");
+        List<dvUser> dvUsers = mapper.selectUser(null);
+        return null;
     }
 
     @Override

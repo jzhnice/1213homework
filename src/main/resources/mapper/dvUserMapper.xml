@@ -60,6 +60,7 @@
       and modifyDate = #{modifydate,jdbcType=TIMESTAMP}
     </if>
   </select>
+
   <delete id="deleteByPrimaryKey" parameterType="java.lang.Long" >
     delete from dev_user
     where id = #{id,jdbcType=BIGINT}

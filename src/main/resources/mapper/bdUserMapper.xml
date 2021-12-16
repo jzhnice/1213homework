@@ -26,8 +26,7 @@
     select
     <include refid="Base_Column_List" />
     from backend_user
-    where
-
+    <where>
     <if test="usercode != null" >
       userCode = #{usercode,jdbcType=BIGINT}
     </if>
@@ -46,6 +45,7 @@
     <if test="modifyby != null" >
     and modifyBy=  #{modifyby,jdbcType=BIGINT}
     </if>
+    </where>
   </select>
   <delete id="deleteByPrimaryKey" parameterType="java.lang.Long" >
     delete from backend_user

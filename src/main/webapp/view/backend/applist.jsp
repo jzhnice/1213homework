@@ -1,6 +1,6 @@
 
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-	pageEncoding="UTF-8"%>
+	pageEncoding="UTF-8" isELIgnored="false" %>
 <%@include file="common/header.jsp"%>
 <div class="clearfix"></div>
 <div class="row">
@@ -26,7 +26,7 @@
 							</div>
 						</div>
 					</li>
-					
+
 					<li>
 						<div class="form-group">
 							<label class="control-label col-md-3 col-sm-3 col-xs-12">所属平台</label>
@@ -157,7 +157,8 @@
 								</tr>
 							</thead>
 							<tbody>
-								<c:forEach var="appInfo" items="${appInfoList }" varStatus="status">
+<%--							 forEach var="每个变量名字"   items="要迭代的list"   varStatus="每个对象的状态"--%>
+								<c:forEach var="appInfo" items="${query}" varStatus="status">
 									<tr role="row" class="odd">
 										<td tabindex="0" class="sorting_1">${appInfo.softwareName}</td>
 										<td>${appInfo.APKName }</td>
@@ -167,10 +168,11 @@
 										<td>${appInfo.statusName }</td>
 										<td>${appInfo.downloads }</td>
 										<td>${appInfo.versionNo }</td>
+										<td>${appInfo.userCode }</td>
 										<td>
-										<button type="button" class="btn btn-default checkApp" 
-											appinfoid="${appInfo.id }" versionid="${appInfo.versionId }" status="${appInfo.status }" 
-											statusname="${appInfo.statusName }"											
+										<button type="button" class="btn btn-default checkApp"
+											appinfoid="${appInfo.id }" versionid="${appInfo.versionId }" status="${appInfo.status }"
+											statusname="${appInfo.statusName }"
 											data-toggle="tooltip" data-placement="top" title="" data-original-title="查看并审核APP">审核</button>
 										</td>
 									</tr>

@@ -1,7 +1,10 @@
 package com.dzqc.mapper;
 
 import com.dzqc.entity.Info;
+import com.dzqc.entity.bdUser;
 import org.springframework.stereotype.Repository;
+
+import java.util.List;
 
 @Repository
 public interface InfoMapper {
@@ -10,6 +13,7 @@ public interface InfoMapper {
     int insert(Info record);
 
     int insertSelective(Info record);
+    List<Info> selectUser(Info info);
 
     Info selectByPrimaryKey(Long id);
 

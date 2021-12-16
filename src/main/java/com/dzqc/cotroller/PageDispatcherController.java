@@ -29,8 +29,9 @@ public class PageDispatcherController {
     public String login(){
         return "backendlogin";
     }
-    @GetMapping("applist.to")
-    public String applist(){
+
+    @GetMapping("querry.to")
+    public String querry(){
         return "backend/applist";
     }
 }

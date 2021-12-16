@@ -62,20 +62,20 @@
                 <ul class="nav side-menu">
                   <li><a><i class="fa fa-home"></i> APP管理 <span class="fa fa-chevron-down"></span></a>
                     <ul class="nav child_menu">
-                      <li><a href="${pageContext.request.contextPath }/applist">APP审核</a></li>
-                      <li><a href="javascript:;">广告推广</a></li>
+                      <li><a href="${pageContext.request.contextPath }/user">APP审核</a></li>
+                      <li><a href="javascript:">广告推广</a></li>
                     </ul>
                   </li>
                   <li><a><i class="fa fa-edit"></i> 用户管理 <span class="fa fa-chevron-down"></span></a>
                     <ul class="nav child_menu">
-                      <li><a href="javascript:;">后台用户管理</a></li>
-                      <li><a href="javascript:;">开发者资质审核</a></li>
+                      <li><a href="javascript:">后台用户管理</a></li>
+                      <li><a href="javascript:">开发者资质审核</a></li>
                     </ul>
                   </li>
                   <li><a><i class="fa fa-bug"></i> 基础数据维护 <span class="fa fa-chevron-down"></span></a>
                     <ul class="nav child_menu">
-                      <li><a href="javascript:;">数据字典</a></li>
-                      <li><a href="javascript:;">APP分类管理</a></li>
+                      <li><a href="javascript:">数据字典</a></li>
+                      <li><a href="javascript:">APP分类管理</a></li>
                     </ul>
                   </li>
                 </ul>
@@ -114,7 +114,7 @@
 
               <ul class="nav navbar-nav navbar-right">
                 <li class="">
-                  <a href="javascript:;" class="user-profile dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+                  <a href="javascript:" class="user-profile dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
                     <img src="${pageContext.request.contextPath }/statics/images/img.jpg" alt="">${devUserSession.usercode }
                     <span class=" fa fa-angle-down"></span>
                   </a>

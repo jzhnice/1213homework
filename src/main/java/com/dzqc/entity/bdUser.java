@@ -1,5 +1,7 @@
 package com.dzqc.entity;
 
+import com.alibaba.fastjson.JSON;
+
 import java.util.Date;
 //系统管理员
 public class bdUser {
@@ -91,5 +93,10 @@ public class bdUser {
 
     public void setUserpassword(String userpassword) {
         this.userpassword = userpassword == null ? null : userpassword.trim();
+    }
+
+    @Override
+    public String toString() {
+        return JSON.toJSONString(this);
     }
 }

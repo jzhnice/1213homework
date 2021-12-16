@@ -6,7 +6,7 @@
 	<div class="title_left">
 		<h3>
 			<h3>
-			欢迎你：${devUserSession.usercode }<strong> | 角色：${devUserSession.username }</strong>
+			欢迎你：${dev2UserSession.usercode }<strong> | 角色：${devUserSession.username }</strong>
 			</h3>
 		</h3>
 	</div>
